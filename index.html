@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html ng-app="pokeBazaar">
 	<head>
+		<link rel="stylesheet" type="text/css" href="pokemon-bazaar.css">
 		<script type="text/javascript" src="angular.min.js"></script>
     	<script type="text/javascript" src="app.js"></script>
     	<script type="text/javascript" src="pokemon.js"></script>
 	</head>
-	<body>
+	<body ng-controller="BazaarController as bazaar">
+		<!-- Bazaar Header -->
 		<header>
 			<h1 class="text-center">Pokemon Bazaar</h1>
-			<h2 class="text-center">- Trade in your casino chips for unique and rare Pokemon! -</h2>
+			<h3 class="text-center">- Trade in your casino chips for unique and rare Pokemon! -</h3>
 		</header>
 
 		<!-- Pokemons Container -->
 		<div class="list-group">
 			<!-- Pokemon Container -->
-			<div class="list-group-item">
+			<div class="list-group-item" ng-repeat="pokemon in bazaar">
+				<h3>{{pokemon.name}} <em class="pull-right">{{pokemon.price | currency}}</em></h3>
 				
 				<!-- Image Galley -->
-
+				<pokemon-gallery></pokemon-gallery>
+				
 				<!-- Pokemon Tabs -->
-
+				<pokemon-tabs></pokemon-tabs> 
 			</div>
 		</div>
-
 	</body>
 </html>
