@@ -1,0 +1,10 @@
+<!-- Pokemon Delete Tab's Content -->
+<form name="removeForm" ng-controller="RemoveController as removeCtrl" ng-submit="removePokemon(pokemon)" accept-charset="utf-8">
+	
+	<h4>WARNING! Are you sure you want to remove <strong>{{pokemon.name}}</strong> from the list?</h4>
+	
+	<fieldset class="form-group">
+	      <input type="submit" class="btn btn-primary pull-right" value="Remove Pokemon" />
+	   </fieldset>
+
+</form>

@@ -1,10 +1,10 @@
-<div ng-show="pokemon.images.lenght">
+<div ng-show="pokemon.images.length">
 	<div class="img-wrap">
 		<img ng-src="{{pokemon.images[gallery.current]}}" />
 	</div>
 	<ul class="img-thumbnails clearfix">
-		<li class="small-image pull-left thumbnail" ng-repeat="images in pokemon.images">
-			<img ng-src="{{images}}" />
+		<li class="small-image pull-left thumbnail" ng-repeat="image in pokemon.images">
+			<img ng-src="{{image}}" />
 		</li>
 	</ul>
 </div>

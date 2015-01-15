@@ -1,0 +1,63 @@
+<!-- Pokemon Add Section Content -->
+<div>
+	<form name="addForm" ng-controller="AddController as addCtrl" ng-submit="addPokemon(pokemon)" accept-charset="utf-8">
+
+	   <!--  Live Preview -->
+	   <blockquote>
+	   	 <strong>Name: {{pokemon.name}}</strong>
+	   	 <h6>Entry no.: {{pokemon.id}}</h6>
+	   	 <h6>Species: {{pokemon.species}} Pokemon</h6>
+	   	 <h6>Type: {{pokemon.type}}</h6>
+	   	 <h6>HT: {{pokemon.height}}</h6>
+	   	 <h6>WT: {{pokemon.weight}} lbs.</h6>
+	   	 <h6>Description: {{pokemon.description}}</h6>
+	   	 <h6>Price: {{pokemon.price | currency}}</h6>
+	   </blockquote>
+
+	   <!--  Review Form -->
+	   <h4>Submit a Pokemon</h4>
+	   <fieldset class="form-group">
+	   	  	<h6>Name</h6>
+	     	<input ng-model="pokemon.name" class="form-control" placeholder="#Example: Pidgey" title="Name"/>
+	   </fieldset>
+	   
+	   <fieldset class="form-group">
+	   		<h6>Entry no.</h6>
+	      	<input ng-model="pokemon.id" class="form-control" placeholder="#Example: 16" title="Entry no."/>
+	   </fieldset>
+	   
+	   <fieldset class="form-group">
+	   		<h6>Species</h6>
+	      	<input ng-model="pokemon.species" class="form-control" placeholder="#Example: Tiny Bird" title="Species" />
+	   </fieldset>
+
+	   <fieldset class="form-group">
+	   		<h6>Type</h6>
+	   		<input ng-model="pokemon.type" class="form-control" placeholder="#Example: Flying, Normal" title="Type" />
+	   </fieldset>
+
+	   <fieldset class="form-group">
+	   		<h6>HT</h6>
+	   		<input ng-model="pokemon.height" class="form-control" placeholder="#Example: 1'00&#34;" title="HT"  />
+	   </fieldset>	
+
+	   <fieldset class="form-group">
+	   		<h6>WT</h6>
+	   		<input ng-model="pokemon.weight" class="form-control" placeholder="#Example: 4.01" title="WT" />
+	   </fieldset>	
+
+	   <fieldset class="form-group">
+	   		<h6>Description</h6>
+	   		<textarea ng-model="pokemon.description" class="form-control" placeholder="#Example: A common sight in forests and woods. It flaps its wings at ground level to kick up blinding sand." title="Description"></textarea>
+	   </fieldset>
+
+	   <fieldset class="form-group">
+	   	<h6>Price</h6>
+	   		<input ng-model="pokemon.price" class="form-control" placeholder="#Example: 50" title="Price"/>
+	   </fieldset>
+	   
+	   <fieldset class="form-group">
+	      <input type="submit" class="btn btn-primary pull-right" value="Submit Pokemon" />
+	   </fieldset>
+	</form>
+<div>

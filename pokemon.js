@@ -27,8 +27,7 @@
 				};
 
 				this.setTab = function(activeTab) {
-					this.tab = activeTab;
-					console.log(this.tab);	
+					this.tab = activeTab;	
 				};
 
 			},
@@ -49,4 +48,25 @@
       		controllerAs: "gallery"
 		}
 	});
+
+	app.directive('pokemonEdit', function() {
+		return {
+			restrict : 'AE',
+			templateUrl: 'pokemon-edit.html'
+		}
+	});
+
+	app.directive('pokemonDelete', function() {
+		return {
+			restrict : 'AE',
+			templateUrl: 'pokemon-delete.html'
+		}
+	});
+
+	app.directive("pokemonAdd", function() {
+    	return {
+      		restrict: 'AE',
+      		templateUrl: "pokemon-add.html"
+    	};
+  });
 })();

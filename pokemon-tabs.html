@@ -6,6 +6,12 @@
 		</li>
 		<li ng-class="{ active:tab.isSet(2) }">
 			<a href="" ng-click="tab.setTab(2)">Info</a>
+		</li>
+		<li ng-class="{ active:tab.isSet(3) }">
+			<a href="" ng-click="tab.setTab(3)">Edit</a>
+		</li>
+		<li ng-class="{ active:tab.isSet(4) }">
+			<a href="" ng-click="tab.setTab(4)">Delete</a>
 		</li>	
 	</ul>
 
@@ -14,5 +20,11 @@
 
 	<!-- Pokemon Info Tab's Content -->
 	<pokemon-info ng-show="tab.isSet(2)"></pokemon-info>
+
+	<!-- Pokemon Info Edit Tab's Content -->
+	<pokemon-edit ng-show="tab.isSet(3)"></pokemon-edit>
+
+	<!-- Pokemon Delete Tab's Content -->
+	<pokemon-delete ng-show="tab.isSet(4)"></pokemon-delete>
 
 </section>

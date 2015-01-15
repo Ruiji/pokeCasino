@@ -1,8 +1,35 @@
 	var app = angular.module('pokeBazaar', ['bazaar-directives']);
+	
 	app.controller('BazaarController', function($scope) {
 		$scope.bazaar = pokemon;
-		//bazaar.pokemons = [];
 		console.log($scope.bazaar);
+	});
+
+	app.controller('AddController', function($scope){
+		$scope.pokemon = {};
+
+		$scope.addPokemon = function(pokemon) {
+			$scope.bazaar.push(pokemon);
+			$scope.pokemon = {};
+		};
+	});
+
+	app.controller('EditController', function($scope) {
+		
+	});
+
+	app.controller('RemoveController', function($scope) {
+		$scope.getIndex = function(pokemon) {
+			index = $scope.bazaar.indexOf(pokemon);
+			return index;
+		};
+
+		$scope.removePokemon = function(pokemon) {
+			index = $scope.getIndex(pokemon);
+			console.log(index);
+			$scope.bazaar.splice(index, 1);
+		}
+		
 	});
 
 	var pokemon = [ {
@@ -16,7 +43,6 @@
 			price : 150,
 			images: [
 				"images/articuno1.png",
-				"images/articuno2.gif",
 				"images/articuno3.gif",
 				"images/articuno4.png"
 			]
@@ -31,7 +57,6 @@
 			price : 150,
 			images: [
 				"images/zapdos1.png",
-				"images/zapdos2.gif",
 				"images/zapdos3.png",
 				"images/zapdos4.png"
 			]
@@ -46,7 +71,6 @@
 			price : 150,
 			images: [
 				"images/moltres1.png",
-				"images/moltres2.gif",
 				"images/moltres3.png",
 				"images/moltres4.png"
 			]
@@ -62,7 +86,6 @@
 			images: [
 				"images/latias1.png",
 				"images/latias2.png",
-				"images/latias3.gif",
 				"images/latias4.png"
 			]
 		}, {
@@ -77,8 +100,7 @@
 			images: [
 				"images/latios1.png",
 				"images/latios2.png",
-				"images/latios3.gif",
-				"images/latios4.png"
+				"images/latios3.gif"
 			]
 		}, {
 			name : 'Luxray',
@@ -92,8 +114,7 @@
 			images: [
 				"images/luxray1.png",
 				"images/luxray2.png",
-				"images/luxray3.png",
-				"images/luxray4.png"
+				"images/luxray3.png"
 			]
 		}
 
