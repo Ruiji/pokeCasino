@@ -1,2 +1,49 @@
 <!-- Pokemon Info Edit Tab's Content -->
-<h4>-Coming Soon-<h4>
+	<form name="editForm" ng-controller="EditController as editCtrl" ng-submit="editPokemon(pokemon) " accept-charset="utf-8">
+
+	   <!--  Review Form -->
+	   <h4>Submit a Pokemon</h4>
+	   <fieldset class="form-group">
+	   	  	<h6>Name</h6>
+	     	<input ng-model="pokemon.name" class="form-control" title="Name"/>
+	   </fieldset>
+	   
+	   <fieldset class="form-group">
+	   		<h6>Entry no.</h6>
+	      	<input ng-model="pokemon.id" class="form-control" title="Entry no."/>
+	   </fieldset>
+	   
+	   <fieldset class="form-group">
+	   		<h6>Species</h6>
+	      	<input ng-model="pokemon.species" class="form-control" title="Species" />
+	   </fieldset>
+
+	   <fieldset class="form-group">
+	   		<h6>Type</h6>
+	   		<input ng-model="pokemon.type" class="form-control" title="Type" />
+	   </fieldset>
+
+	   <fieldset class="form-group">
+	   		<h6>HT</h6>
+	   		<input ng-model="pokemon.height" class="form-control" title="HT"  />
+	   </fieldset>	
+
+	   <fieldset class="form-group">
+	   		<h6>WT</h6>
+	   		<input ng-model="pokemon.weight" class="form-control" title="WT" />
+	   </fieldset>	
+
+	   <fieldset class="form-group">
+	   		<h6>Description</h6>
+	   		<textarea ng-model="pokemon.description" class="form-control" title="Description"></textarea>
+	   </fieldset>
+
+	   <fieldset class="form-group">
+	   	<h6>Price</h6>
+	   		<input ng-model="pokemon.price" class="form-control" title="Price"/>
+	   </fieldset>
+	   
+	   <fieldset class="form-group">
+	      <input type="submit" class="btn btn-primary pull-right" value="Edit Pokemon" />
+	   </fieldset>
+	</form>

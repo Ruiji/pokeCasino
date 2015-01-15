@@ -15,6 +15,16 @@
 	});
 
 	app.controller('EditController', function($scope) {
+		$scope.getIndex = function(pokemon) {
+			index = $scope.bazaar.indexOf(pokemon);
+			return index;
+		};
+
+		$scope.editPokemon = function(pokemon) {
+			index = $scope.getIndex(pokemon);
+			console.log(index);
+			$scope.bazaar[index] = pokemon;
+		};
 		
 	});
 
@@ -26,7 +36,6 @@
 
 		$scope.removePokemon = function(pokemon) {
 			index = $scope.getIndex(pokemon);
-			console.log(index);
 			$scope.bazaar.splice(index, 1);
 		}
 		
